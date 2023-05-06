@@ -5,6 +5,10 @@
   --highlight-color: rgb(255, 252, 233);
 }
 
+li {
+  list-style: none;
+}
+
 body {
   background-color: var(--background);
   margin: 0;
@@ -21,6 +25,11 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
+}
+
+.socials {
+  display: flex;
+  align-content: center;
 }
 
 .page {
