@@ -1,8 +1,14 @@
 :root {
-  --background: rgb(198, 95, 95);
-  --primary-text: rgb(138, 28, 28);
+  --background: rgb(33, 0, 53);
+  --primary-text: rgb(255, 254, 249);
+  --primary-font: 'Fjalla One', sans-serif;
   --secondary-text: rgb(73, 2, 2);
-  --highlight-color: rgb(255, 252, 233);
+  --highlight-color: rgb(234, 234, 234);
+}
+
+h1 {
+  color: var(--primary-text);
+  font-family: var(--primary-font);
 }
 
 li {
@@ -19,17 +25,29 @@ body {
   grid-template-columns: 5fr 1fr;
 }
 
+.right {
+  position: fixed;
+  right: 0;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  
+}
+
 .info-links {
   z-index: 10;
   display: flex;
+  width: 100%;
+  align-content: center;
   position: fixed;
   bottom: 0;
   left: 0;
 }
 
-.socials {
+.socials, 
+.socials > ul {
   display: flex;
-  align-content: center;
+  align-items: center;
 }
 
 .page {
