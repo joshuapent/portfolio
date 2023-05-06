@@ -9,11 +9,6 @@ body {
   background-color: var(--background);
   margin: 0;
 }
-/* temp */
-h1 { 
-  margin: 0;
-}
-/* temp */
 
 .split-content {
   display: grid;
@@ -21,11 +16,20 @@ h1 {
 }
 
 .info-links {
-  z-index: 1000;
-
+  z-index: 10;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 .page {
   height: 90svh;
   margin-bottom: 10svh;
 }
+
+/* temp */
+h1 { 
+  margin: 0;
+}
+/* temp */
