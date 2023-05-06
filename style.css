@@ -17,8 +17,15 @@ h1 {
 
 .split-content {
   display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+.info-links {
+  z-index: 1000;
+
 }
 
 .page {
-  height: 100svh;
+  height: 90svh;
+  margin-bottom: 10svh;
 }
