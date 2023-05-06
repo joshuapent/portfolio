@@ -7,7 +7,6 @@
 
 body {
   background-color: var(--background);
-  cursor: crosshair;
   margin: 0;
 }
 /* temp */
@@ -17,5 +16,9 @@ h1 {
 /* temp */
 
 .split-content {
+  display: grid;
+}
 
+.page {
+  height: 100svh;
 }
