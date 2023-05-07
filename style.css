@@ -1,15 +1,26 @@
 :root {
   --background: rgb(33, 0, 53);
+  --primary-color: rgb(23, 0, 117);
+  --highlight-color: rgb(234, 234, 234);
   --primary-text: rgb(255, 254, 249);
+  --secondary-text: rgb(73, 2, 2);
   --primary-font: 'Fjalla One', sans-serif;
   --secondary-font: 'Merriweather', serif;
-  --secondary-text: rgb(73, 2, 2);
-  --highlight-color: rgb(234, 234, 234);
 }
 
 h1 {
   color: var(--primary-text);
   font-family: var(--primary-font);
+}
+
+button {
+  background-color: var(--primary-color);
+  border: 1px solid var(--highlight-color);
+  padding: 0.5em;
+  border-radius: 10px;
+  width: 100px;
+  align-self: center;
+  color: var(--primary-text)
 }
 
 li {
@@ -135,7 +146,7 @@ h1 {
 .contact-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 2px solid white;
+  border: 2px solid var(--highlight-color);
   border-radius: 10px;
   padding: 2em;
   min-width: 50vw;
@@ -151,9 +162,14 @@ h1 {
 
 .contact-me {
   background-color: var(--background);
-  border: 1px solid white;
+  border: 1px solid var(--highlight-color);
   border-radius: 8px;
   padding: 0.5rem;
+  font-size: 1rem;
   font-family: var(--secondary-font);
   color: var(--primary-text)
+}
+
+textarea {
+  height: 30%
 }
