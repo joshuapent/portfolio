@@ -35,13 +35,6 @@ body {
   flex-direction: column;
 }
 
-.left {
-  padding: 2em 0 2em 0;
-}
-
-.navigation {
-}
-
 .info-links {
   z-index: 10;
   display: flex;
@@ -54,10 +47,20 @@ body {
   gap: 1.5rem;
 }
 
+.skills {
+  display: flex;
+  gap: 1rem;
+  color: white;
+  opacity: 50%; 
+}
+
 .socials, 
 .socials > ul {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  
 }
 
 .page {
