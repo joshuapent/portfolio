@@ -144,19 +144,18 @@ h1 {
 
 #contact {
   flex-direction: column;
-  padding: 0 4em;
+  padding: 0 2em;
 }
 
 .contact-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 2em;
+  display: flex;
+  /* padding: 2em; */
   min-width: 50vw;
   height: 50vh;
 }
 
 .contact-form > form {
-  width: 100%;
+  width: 50%;
   border: 2px solid var(--highlight-color);
   border-radius: 10px;
   padding: 2em;
@@ -178,6 +177,11 @@ h1 {
   font-size: 1rem;
   font-family: var(--secondary-font);
   color: var(--primary-text)
+}
+
+.form-info {
+  padding: 2em;
+  color: white;
 }
 
 textarea {
