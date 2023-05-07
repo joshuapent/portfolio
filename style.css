@@ -36,7 +36,7 @@ body {
 }
 
 .left {
-  margin: 2em;
+  padding: 2em 0 2em 0;
 }
 
 .navigation {
@@ -50,7 +50,7 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  margin: 0 0 1.5em 10em;
+  padding: 0 0 1.5em 10em;
   gap: 1.5rem;
 }
 
