@@ -2,6 +2,7 @@
   --background: rgb(33, 0, 53);
   --primary-text: rgb(255, 254, 249);
   --primary-font: 'Fjalla One', sans-serif;
+  --secondary-font: 'Merriweather', serif;
   --secondary-text: rgb(73, 2, 2);
   --highlight-color: rgb(234, 234, 234);
 }
@@ -13,6 +14,7 @@ h1 {
 
 li {
   list-style: none;
+  font-family: var(--secondary-font);
 }
 
 body {
@@ -29,13 +31,14 @@ body {
   position: fixed;
   right: 0;
   height: 100svh;
+  width: fill;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-#home {
+.page {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +58,7 @@ body {
 
 .skills {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   color: white;
   opacity: 50%; 
@@ -88,3 +92,27 @@ h1 {
   margin: 0;
 }
 /* temp */
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin-right: 3em;
+}
+
+#navigation > li {
+  margin: 1em 0 1em 0;
+}
+
+.line {
+  height: 4em;
+  width: 1px;
+  background-color: white;
+
+}
