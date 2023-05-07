@@ -35,6 +35,12 @@ body {
   flex-direction: column;
 }
 
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .info-links {
   z-index: 10;
   display: flex;
@@ -43,7 +49,7 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 0 0 1.5em 10em;
+  padding: 0 0 1.5vh 8vw;
   gap: 1.5rem;
 }
 
