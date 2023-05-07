@@ -31,17 +31,22 @@ body {
   height: 100svh;
   display: flex;
   align-items: center;
-  
+}
+
+.left {
+  margin: 2em;
 }
 
 .info-links {
   z-index: 10;
   display: flex;
   width: 100%;
-  align-content: center;
+  align-items: center;
   position: fixed;
   bottom: 0;
   left: 0;
+  margin: 0 0 1.5em 10em;
+  gap: 1.5rem;
 }
 
 .socials, 
@@ -53,6 +58,15 @@ body {
 .page {
   height: 90svh;
   margin-bottom: 10svh;
+}
+
+.info-image {
+  max-width: 150px;
+  min-width: 100px;
+}
+
+.info-links > h1 {
+  font-size: 1rem;
 }
 
 /* temp */
