@@ -1,10 +1,10 @@
 :root {
-  --background: #343E3D;
+  --background: #825728;
   --background2: #01161E;
-  --primary-color: #3626A7;
+  --primary-color: #773344;
   --highlight-color: rgb(234, 234, 234);
   --primary-text: rgb(255, 254, 249);
-  --secondary-text: #643f46;
+  --secondary-text: #5A0F06;
   --primary-font: 'Fjalla One', sans-serif;
   --secondary-font: 'Merriweather', serif;
 }
@@ -209,13 +209,21 @@ textarea {
 
 .project-card {
   visibility: hidden;
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 1;
 }
 
 .project-card-show {
   visibility: visible;
+  animation: fadeIn 2s;
   grid-column: 2;
   grid-row: 1;
   min-width: 50%;
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
