@@ -16,7 +16,7 @@ h1 {
 
 button {
   background-color: var(--primary-color);
-  border: none;
+  border: none; 
   padding: 0.5em;
   border-radius: 10px;
   width: 100px;
@@ -162,7 +162,6 @@ h1 {
   padding: 2em;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   gap: 5%;
   color: var(--primary-text);
@@ -173,11 +172,15 @@ h1 {
   background-color: var(--background);
   border: 1px solid var(--highlight-color);
   border-radius: 8px;
-  width: 100%;
   padding: 0.5rem;
   font-size: 1rem;
   font-family: var(--secondary-font);
   color: var(--primary-text)
+}
+
+input[type=text],
+input[type=email] {
+  max-width: 250px;
 }
 
 .form-info {
@@ -186,5 +189,10 @@ h1 {
 }
 
 textarea {
-  height: 30%
+  height: 30%;
+}
+
+.image > img{
+  max-width: 200px;
+  max-height: 200px;
 }
