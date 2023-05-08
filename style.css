@@ -220,6 +220,14 @@ textarea {
   opacity: 1;
 }
 
+#home-description {
+  color: var(--secondary-text)
+}
+
+.orange {
+  color: var(--primary-text)
+}
+
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
