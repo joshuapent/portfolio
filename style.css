@@ -1,10 +1,8 @@
 :root {
-  --background: #825728;
-  --background2: #01161E;
-  --primary-color: #773344;
-  --highlight-color: rgb(234, 234, 234);
-  --primary-text: rgb(255, 254, 249);
-  --secondary-text: #5A0F06;
+  --background: #01161E;
+  --highlight-color: #2A2D34;
+  --primary-text: #F26430;
+  --secondary-text: #fff8f0;
   --primary-font: 'Fjalla One', sans-serif;
   --secondary-font: 'Merriweather', serif;
 }
@@ -15,7 +13,7 @@ h1 {
 }
 
 button {
-  background-color: var(--primary-color);
+  background-color: var(--highlight-color);
   border: none; 
   padding: 0.5em;
   border-radius: 10px;
@@ -80,9 +78,8 @@ body {
 .skills {
   display: flex;
   flex-wrap: wrap;
-
   gap: 1rem;
-  color: white;
+  color: var(--secondary-text);
   opacity: 50%; 
 }
 
@@ -105,8 +102,8 @@ body {
 }
 
 .info-image {
-  max-width: 150px;
-  min-width: 100px;
+  max-width: 125px;
+  min-width: 75px;
 }
 
 .info-links > h1 {
@@ -120,7 +117,7 @@ h1 {
 /* temp */
 .nav-link {
   text-decoration: none;
-  color: white;
+  color: var(--primary-text);
 }
 
 #navigation {
@@ -139,7 +136,7 @@ h1 {
 .line {
   height: 4em;
   width: 1px;
-  background-color: white;
+  background-color: var(--);
 
 }
 
