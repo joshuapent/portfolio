@@ -103,7 +103,7 @@ body {
 
 .info-image {
   max-width: 125px;
-  min-width: 75px;
+  min-width: 75 px;
 }
 
 .info-links > h1 {
