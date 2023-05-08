@@ -182,7 +182,13 @@ input[type=email] {
 
 .form-info {
   padding: 2em;
-  color: white;
+  color: var(--secondary-text);
+}
+
+hr {
+  background-color: #F26430;
+  height: 2px;
+  border: none;
 }
 
 textarea {
@@ -192,6 +198,10 @@ textarea {
 .image > img{
   max-width: 200px;
   max-height: 200px;
+}
+
+.footer-desc {
+  color: var(--secondary-text);
 }
 
 .project-grid {
@@ -208,6 +218,7 @@ textarea {
   visibility: hidden;
   grid-column: 2;
   grid-row: 1;
+  color: var(--secondary-text);
 }
 
 .project-card-show {
@@ -218,6 +229,13 @@ textarea {
   min-width: 50%;
   transform: scaleX(1);
   opacity: 1;
+}
+
+.project-skill {
+  background-color: var(--primary-text);
+  border-radius: 5px;
+  padding: 2px;
+  color: var(--background)
 }
 
 #home-description {
