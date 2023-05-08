@@ -25,7 +25,7 @@ button {
 }
 
 button:hover {
-  border: 1px solid white;
+  box-shadow: 0 0 0 1px #d0d0d0;
 }
 
 li {
@@ -197,10 +197,25 @@ textarea {
   max-height: 200px;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.projects {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 .project-card {
   visibility: hidden;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .project-card-show {
   visibility: visible;
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 50%;
 }
