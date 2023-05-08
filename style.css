@@ -196,3 +196,11 @@ textarea {
   max-width: 200px;
   max-height: 200px;
 }
+
+.project-card {
+  visibility: hidden;
+}
+
+.project-card-show {
+  visibility: visible;
+}

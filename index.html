@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Merriweather&family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
   <link rel="icon" type="image/png" href="./files/myIcon.png"/>
   <title>Joshua Pent || Software Engineer</title>
 </head>
@@ -27,7 +27,15 @@
           <h1>About Me</h1>
         </div>
         <div id="projects" class="page">
-          <h1>Projects</h1>
+          <div class="projects">
+            <h1>Projects</h1>
+            <ul>
+              <li><button id="pacman-button">Pacman</button></li>
+              <li><button id="slack-button">Slack Overflow</button></li>
+              <li><button id="onyx-button">Onyx Gaming</button></li>
+            </ul>
+          </div>
+          
           <div class="project-card" id="pacman">
             <h1>Pacman</h1>
             <div class="image">
