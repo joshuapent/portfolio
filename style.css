@@ -1,10 +1,10 @@
 :root {
   --background: #343E3D;
   --background2: #01161E;
-  --primary-color: rgb(23, 0, 117);
+  --primary-color: #3626A7;
   --highlight-color: rgb(234, 234, 234);
   --primary-text: rgb(255, 254, 249);
-  --secondary-text: rgb(73, 2, 2);
+  --secondary-text: #643f46;
   --primary-font: 'Fjalla One', sans-serif;
   --secondary-font: 'Merriweather', serif;
 }
