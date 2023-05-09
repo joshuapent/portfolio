@@ -9,8 +9,9 @@
   --secondary-font: 'Merriweather', serif;
 }
 
-html {
-  overflow: hidden;
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 h1 {
@@ -90,7 +91,15 @@ body {
   flex-direction: column;
 }
 
+.pages-container {
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+  height: 100vh;
+}
+
 .page {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   display: flex;
   align-items: center;
   justify-content: center;
