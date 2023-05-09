@@ -207,7 +207,7 @@ textarea {
 
 .project-grid {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: repeat(auto-fit);
 }
 
 .projects {
@@ -228,7 +228,7 @@ textarea {
 .left-bar {
   width: 2px;
   height: auto;
-  background-color: var(--primary-text);
+  background-image: radial-gradient(var(--primary-text), var(--background));
   margin: 0 1em;
 }
 
@@ -244,7 +244,6 @@ textarea {
   min-width: 50%;
   transform: scaleX(1);
   opacity: 1;
-  border: 1px solid white;
 }
 
 .project-skill {
