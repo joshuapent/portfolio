@@ -300,6 +300,11 @@ textarea {
   margin: 0.5em;
 }
 
+.description > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .project-links {
   display: flex;
   padding-right: 1em;
@@ -363,4 +368,25 @@ textarea {
   .info-links {
     visibility: hidden;
   }
+}
+
+#test {
+  border-right: 1px solid orange;
+  padding: 0;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+    typing 2s steps(14, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }

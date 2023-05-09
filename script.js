@@ -6,6 +6,9 @@ const aboutMe = document.getElementById('about-me')
 const projects = document.getElementById('projects')
 const contact = document.getElementById('contact')
 
+window.onload = function() {
+  pacman.classList.add('project-card-show');
+}
 
 document.getElementById('pacman-button').onclick = function() {
   slackOverFlow.classList.remove('project-card-show')
@@ -22,6 +25,8 @@ document.getElementById('onyx-button').onclick = function() {
   pacman.classList.remove('project-card-show')
   onyxGaming.classList.add('project-card-show');
 }
+
+
 
 // addEventListener('scroll', function() {
 //   console.log('yo')
