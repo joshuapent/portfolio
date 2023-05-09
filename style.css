@@ -1,6 +1,7 @@
 :root {
   --background: #01161E;
   --highlight-color: #2A2D34;
+  --highlight2: #17485d;
   --primary-text: #F26430;
   --secondary-text: #fff8f0;
   --primary-font: 'Fjalla One', sans-serif;
@@ -212,13 +213,27 @@ textarea {
 .projects {
   grid-column: 1;
   grid-row: 1;
+  margin-right: 10vw;
 }
 
 .project-card {
   visibility: hidden;
   grid-column: 2;
   grid-row: 1;
+  width: 50vw;
+  max-width: 800px;
   color: var(--secondary-text);
+}
+
+.left-bar {
+  width: 2px;
+  height: auto;
+  background-color: var(--primary-text);
+  margin: 0 1em;
+}
+
+.project-format {
+  display: flex;
 }
 
 .project-card-show {
@@ -229,13 +244,34 @@ textarea {
   min-width: 50%;
   transform: scaleX(1);
   opacity: 1;
+  border: 1px solid white;
 }
 
 .project-skill {
-  background-color: var(--primary-text);
+  background-color: var(--highlight2);
   border-radius: 5px;
   padding: 2px;
-  color: var(--background)
+  color: var(--primary-text)
+}
+
+.project-card > h1 {
+  margin: 0.5em;
+}
+
+.project-links {
+  display: flex;
+  gap: 5px;
+  margin: 1.5em 0 0 0;
+  color: var(--secondary-text);
+}
+
+.project-links > li > a {
+  color: var(--secondary-text);
+  padding: 0 0 0 0.5em;
+}
+
+.project-links > li > a:hover {
+  color: rgb(218, 218, 218);
 }
 
 #home-description {
