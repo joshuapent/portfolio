@@ -9,6 +9,10 @@
   --secondary-font: 'Merriweather', serif;
 }
 
+html {
+  overflow: hidden;
+}
+
 h1 {
   color: var(--primary-text);
   font-family: var(--primary-font);
@@ -46,6 +50,28 @@ ul, h2 {
 body {
   background-color: var(--background-dark);
   margin: 0;
+}
+
+.resume-link {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 3.5em;
+  padding: 3px;
+  background-color: var(--primary-text);
+  border: none;
+  border-radius: 4px;
+  z-index: 100;
+  font-size: 1em;
+}
+
+.resume-link:hover {  
+  background-color: #ea7a51;
+  cursor: pointer;
+}
+
+.resume-link:active {
+  background-color: #e98b69;
 }
 
 .split-content {
@@ -300,8 +326,8 @@ textarea {
   color: white;
 }
 
-.project-button:active {
-  color: var(--secondary-text);
+.project-button:focus {
+  color: var(--primary-text);
 }
 
 #home-description {
@@ -315,4 +341,17 @@ textarea {
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@media (max-width: 625px) {
+  .right,
+  .resume-link {
+    visibility: hidden;
+  }
+}
+
+@media (max-height: 450px) {
+  .info-links {
+    visibility: hidden;
+  }
 }
