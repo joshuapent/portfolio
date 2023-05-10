@@ -26,11 +26,13 @@ document.getElementById('onyx-button').onclick = function() {
   onyxGaming.classList.add('project-card-show');
 }
 
-
+let navPlaceholder;
 const navLinks = document.querySelectorAll('a.nav-link').forEach(navLink => {
   navLink.addEventListener('click', function(evt) {
+    if(navPlaceholder) navPlaceholder.removeAttribute('aria-current')
     evt.preventDefault();
     this.setAttribute('aria-current', true)
+    navPlaceholder = this;
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     })
