@@ -21,17 +21,21 @@ document.getElementById('slack-button').onclick = function() {
   slackOverFlow.classList.add('project-card-show');
 }
 document.getElementById('onyx-button').onclick = function() {
-  slackOverFlow.classList.remove('project-card-show')
-  pacman.classList.remove('project-card-show')
-  onyxGaming.classList.add('project-card-show');
+  slackOverFlow.classList.remove('project-card-show');
+  pacman.classList.remove('project-card-show');
+  onyxGaming.classList.add('project-card-show ');
 }
 
 let navPlaceholder;
 const navLinks = document.querySelectorAll('a.nav-link').forEach(navLink => {
   navLink.addEventListener('click', function(evt) {
-    if(navPlaceholder) navPlaceholder.removeAttribute('aria-current')
+    if(navPlaceholder) {
+      navPlaceholder.removeAttribute('aria-current')
+      navPlaceholder.classList.remove('active-link')
+    }
     evt.preventDefault();
     this.setAttribute('aria-current', true)
+    this.classList.add('active-link')
     navPlaceholder = this;
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
