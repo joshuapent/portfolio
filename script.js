@@ -26,9 +26,13 @@ document.getElementById('onyx-button').onclick = function() {
   onyxGaming.classList.add('project-card-show');
 }
 
+const navLinks = document.querySelectorAll('a.nav-link');
 
-
-// addEventListener('scroll', function() {
-//   console.log('yo')
-//   // document.getElementById('contact').scrollTop;
-// })
+for(i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    })
+  })
+}
