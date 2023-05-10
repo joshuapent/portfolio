@@ -1,10 +1,10 @@
 :root {
-  --background-dark: #161616;
+  --background-dark: #141416;
   --button-color-dark: #323232;
   --highlight-color-hover-dark: #454545;
   --highlight-color-click-dark: #686868;
   --primary-text: #F26430;
-  --secondary-text: #fff8f0cd;
+  --secondary-text: #f0f8ff;
   --primary-font: 'Fjalla One', sans-serif;
   --secondary-font: 'Merriweather', serif;
 }
@@ -57,17 +57,21 @@ body {
   position: fixed;
   right: 0;
   top: 0;
-  margin: 3.5em;
-  padding: 3px;
-  background-color: var(--primary-text);
-  border: none;
-  border-radius: 4px;
+  margin: 20px;
+  padding: 0.4em 0.8em;
+  background-color: transparent;
+  border: 2px solid var(--secondary-text);
+  color: var(--secondary-text);
+  border-radius: 6px;
   z-index: 100;
   font-size: 1em;
+  transition: all .4s
+    ease-in-out;
 }
 
 .resume-link:hover {  
-  background-color: #ea7a51;
+  background-color: var(--secondary-text);
+  color: var(--background-dark);
   cursor: pointer;
 }
 
@@ -368,17 +372,6 @@ textarea {
   .info-links {
     visibility: hidden;
   }
-}
-
-#test {
-  border-right: 1px solid orange;
-  padding: 0;
-  color: white;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: 
-    typing 2s steps(14, end),
-    blink-caret .75s step-end infinite;
 }
 
 @keyframes typing {

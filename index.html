@@ -13,184 +13,179 @@
 </head>
 <body>
   <button class="resume-link">Resume</button>
-  <div class="split-content">
-    <div class="left">
-      <div class="pages-container">
-        <div id="home" class="page">
-          <h1 id="home-description">
-            FULL-STACK WEB DEVELOPER<br>
-            <span class="orange">PASSIONATE</span> ABOUT FINDING<br>
-            SOLUTIONS TO <span class="orange">COMPLEX PROBLEMS</span><br>
-            AND WORKING ON THE <span class="orange">CUTTING EDGE</span> />
-          </h1>
-          <div>
-            <h3 id="test">This is a test</h3>
+  <div class="pages-container">
+    <div class="1empadding" style="padding: 1em;">
+      <div id="home" class="page">
+        <h1 id="home-description">
+          FULL-STACK WEB DEVELOPER<br>
+          <span class="orange">PASSIONATE</span> ABOUT FINDING<br>
+          SOLUTIONS TO <span class="orange">COMPLEX PROBLEMS</span><br>
+          AND WORKING ON THE <span class="orange">CUTTING EDGE</span> />
+        </h1>
+      </div> 
+      <div id="projects" class="page">
+        <div class="project-grid">
+          <div class="projects">
+            <h1>Projects</h1>
+            <hr><br>
+            <ul>
+              <li><button class="project-button" id="pacman-button">Pacman</button></li><br>
+              <li><button class="project-button" id="slack-button">Slack Overflow</button></li><br>
+              <li><button class="project-button" id="onyx-button">Onyx Gaming</button></li>
+            </ul>
           </div>
-        </div> 
-        <div id="projects" class="page">
-          <div class="project-grid">
-            <div class="projects">
-              <h1>Projects</h1>
-              <hr><br>
-              <ul>
-                <li><button class="project-button" id="pacman-button">Pacman</button></li><br>
-                <li><button class="project-button" id="slack-button">Slack Overflow</button></li><br>
-                <li><button class="project-button" id="onyx-button">Onyx Gaming</button></li>
-              </ul>
-            </div>
-            <div class="project-card" id="pacman">
-              <h1>Pacman</h1>
-              <div class="project-format">
-                <div class="left-bar"></div>
-                <div class="project-body">
-                  <div class="image">
-                    <!-- <img src="./files/pacman.png" alt=""> -->
-                  </div>
-                  <div class="description">
-                    <p>A classic game, I created a variation using solely JavaScript and HTML canvas. The project has fully functional collision, win conditions, loss conditions, and rudimentary AI implemented.</p>
-                  </div>
-                  <ul class="skills">
-                    <li class="project-skill">JavaScript</li>
-                    <li class="project-skill">HTML</li>
-                    <li class="project-skill">CSS</li>
-                    <li class="project-skill">HTML Canvas</li>
-                  </ul>
-                  <ul class="project-links">
-                    <li><a href="">Website</a></li>
-                    <li><a href="">Github</a></li>
-                  </ul>
+          <div class="project-card" id="pacman">
+            <h1>Pacman</h1>
+            <div class="project-format">
+              <div class="left-bar"></div>
+              <div class="project-body">
+                <div class="image">
+                  <!-- <img src="./files/pacman.png" alt=""> -->
                 </div>
-              </div>
-            </div>
-            <div class="project-card" id="slackoverflow">
-              <h1>Slack OverFlow</h1>
-              <div class="project-format">
-                <div class="left-bar"></div>
-                <div class="project-body">
-                  <div class="image">
-                    <!-- <img src="./files/pacman.png" alt=""> -->
-                  </div>
-                  <div class="description">
-                    <p>Slack OverFlow is a project aimed at creating a place for cooperation and assistance on code problems, modeled after stack overflow. It is a Django product with posts/comments/and likes fully implemented.</p>
-                  </div>
-                  <ul class="skills">
-                    <li class="project-skill">JavaScript</li>
-                    <li class="project-skill">HTML</li>
-                    <li class="project-skill">CSS</li>
-                    <li class="project-skill">HTML Canvas</li>
-                  </ul>
-                  <ul class="project-links">
-                    <li><a href="">Website</a></li>
-                    <li><a href="">Github</a></li>
-                  </ul>
+                <div class="description">
+                  <p>A classic game, I created a variation using solely JavaScript and HTML canvas. The project has fully functional collision, win conditions, loss conditions, and rudimentary AI implemented.</p>
                 </div>
-              </div>
-            </div>
-            <div class="project-card" id="onyx-gaming">
-              <h1>Onyx Gaming</h1>
-              <div class="project-format">
-                <div class="left-bar"></div>
-                <div class="project-body">
-                  <div class="image">
-                    <!-- <img src="./files/pacman.png" alt=""> -->
-                  </div>
-                  <div class="description">
-                    <p>Onyx gaming is a website designed to link up gamers. There is an explore page to connect gamers, as well as live private conversation functionality run through socket.io.</p>
-                  </div>
-                  <ul class="skills">
-                    <li class="project-skill">REACT</li>
-                    <li class="project-skill">MongoDB</li>
-                    <li class="project-skill">Node JS</li>
-                    <li class="project-skill">Express</li>
-                    <li class="project-skill">Socket.io</li>
-                    <li class="project-skill">AJAX</li>
-                  </ul>
-                  <ul class="project-links">
-                    <li><a href="">Website</a></li>
-                    <li><a href="">Github</a></li>
-                  </ul>
-                </div>
+                <ul class="skills">
+                  <li class="project-skill">JavaScript</li>
+                  <li class="project-skill">HTML</li>
+                  <li class="project-skill">CSS</li>
+                  <li class="project-skill">HTML Canvas</li>
+                </ul>
+                <ul class="project-links">
+                  <li><a href="">Website</a></li>
+                  <li><a href="">Github</a></li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-        <div id="about-me" class="page" >
-          <h1>About Me</h1>
-        </div>
-        <div id="contact" class="page">
-          <h1>Contact Me</h1><br><br>
-          <div class="contact-form">
-            <form action="" method="POST">
-              <h2>Leave A Message</h2>
-              <input 
-                type="text" 
-                class="contact-me"
-                placeholder="Name" 
-                name="full-name" 
-                required >
-              <input 
-                type="email" 
-                class="contact-me"
-                name="email" 
-                placeholder="Email" 
-                required >
-              <textarea 
-                name="message" 
-                class="contact-me"
-                placeholder="Message" 
-                required
-                style="resize: none;"></textarea>
-              <button type="submit" id="form-button">SEND</button>
-            </form>
-            <div class="form-info">
-              <h2>Please Reach out With:</h2><hr><br>
-              <ul>
-                <li>Software Engineering opportunities</li><br>
-                <li>Collaborative proposals</li><br>
-                <li>Freelance opportunities</li><br>
-              </ul>
+          <div class="project-card" id="slackoverflow">
+            <h1>Slack OverFlow</h1>
+            <div class="project-format">
+              <div class="left-bar"></div>
+              <div class="project-body">
+                <div class="image">
+                  <!-- <img src="./files/pacman.png" alt=""> -->
+                </div>
+                <div class="description">
+                  <p>Slack OverFlow is a project aimed at creating a place for cooperation and assistance on code problems, modeled after stack overflow. It is a Django product with posts/comments/and likes fully implemented.</p>
+                </div>
+                <ul class="skills">
+                  <li class="project-skill">JavaScript</li>
+                  <li class="project-skill">HTML</li>
+                  <li class="project-skill">CSS</li>
+                  <li class="project-skill">HTML Canvas</li>
+                </ul>
+                <ul class="project-links">
+                  <li><a href="">Website</a></li>
+                  <li><a href="">Github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" id="onyx-gaming">
+            <h1>Onyx Gaming</h1>
+            <div class="project-format">
+              <div class="left-bar"></div>
+              <div class="project-body">
+                <div class="image">
+                  <!-- <img src="./files/pacman.png" alt=""> -->
+                </div>
+                <div class="description">
+                  <p>Onyx gaming is a website designed to link up gamers. There is an explore page to connect gamers, as well as live private conversation functionality run through socket.io.</p>
+                </div>
+                <ul class="skills">
+                  <li class="project-skill">REACT</li>
+                  <li class="project-skill">MongoDB</li>
+                  <li class="project-skill">Node JS</li>
+                  <li class="project-skill">Express</li>
+                  <li class="project-skill">Socket.io</li>
+                  <li class="project-skill">AJAX</li>
+                </ul>
+                <ul class="project-links">
+                  <li><a href="">Website</a></li>
+                  <li><a href="">Github</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <footer class="info-links">
-        <img src="./files/logo.png" alt="logo" class="info-image">
-        <h1 class="footer-desc">Joshua Pent <br><span>Full-Stack Software Engineer</span></h1>
-        <ul class="skills">
-          <li>Django</li>
-          <li>REACT</li>
-          <li>NodeJS</li>
-          <li>Express</li>
-          <li>MongoDB</li>
-        </ul>
-        <div class="socials">
-          <ul>
-            <li><a href="https://www.linkedin.com/in/joshua-pent-software-engineer/" target="_blank">
-              <img src="./files/LinkedIn.png" style="width: 25px;">
-            </a></li>
-            <li><a href="https://github.com/joshuapent" target="_blank">
-              <img src="./files/GitHub.png" style="width: 25px;">
-            </a></li>
-            <li><a href="#contact">
-              <img src="./files/Email.png" style="width: 25px;">
-            </a></li>
-          </ul>
+      <div id="about-me" class="page" >
+        <h1>About Me</h1>
+      </div>
+      <div id="contact" class="page">
+        <h1>Contact Me</h1><br><br>
+        <div class="contact-form">
+          <form action="" method="POST">
+            <h2>Leave A Message</h2>
+            <input 
+            type="text" 
+            class="contact-me"
+            placeholder="Name" 
+            name="full-name" 
+            required >
+            <input 
+            type="email" 
+            class="contact-me"
+            name="email" 
+            placeholder="Email" 
+            required >
+            <textarea 
+            name="message" 
+            class="contact-me"
+            placeholder="Message" 
+            required
+            style="resize: none;"></textarea>
+            <button type="submit" id="form-button">SEND</button>
+          </form>
+          <div class="form-info">
+            <h2>Please Reach out With:</h2><hr><br>
+            <ul>
+              <li>Software Engineering opportunities</li><br>
+              <li>Collaborative proposals</li><br>
+              <li>Freelance opportunities</li><br>
+            </ul>
+          </div>
         </div>
-      </footer>
+      </div>
     </div>
-    <div class="right">
-      <ul id="navigation">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <div class="line"></div>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <div class="line"></div>
-        <li><a href="#about-me" class="nav-link">About Me</a></li>
-        <div class="line"></div>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+    <footer class="info-links">
+      <img src="./files/logo.png" alt="logo" class="info-image">
+      <h1 class="footer-desc">Joshua Pent <br><span>Full-Stack Software Engineer</span></h1>
+      <ul class="skills">
+        <li>Django</li>
+        <li>REACT</li>
+        <li>NodeJS</li>
+        <li>Express</li>
+        <li>MongoDB</li>
       </ul>
-      <div class="user-hint">
-        <p>Scroll for more</p>
+      <div class="socials">
+        <ul>
+          <li><a href="https://www.linkedin.com/in/joshua-pent-software-engineer/" target="_blank">
+            <img src="./files/LinkedIn.png" style="width: 25px;">
+          </a></li>
+          <li><a href="https://github.com/joshuapent" target="_blank">
+            <img src="./files/GitHub.png" style="width: 25px;">
+          </a></li>
+          <li><a href="#contact">
+            <img src="./files/Email.png" style="width: 25px;">
+          </a></li>
+        </ul>
       </div>
+    </footer>
+  </div>
+  <div class="right">
+    <ul id="navigation">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <div class="line"></div>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <div class="line"></div>
+      <li><a href="#about-me" class="nav-link">About Me</a></li>
+      <div class="line"></div>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="user-hint">
+      <p>Scroll for more</p>
     </div>
   </div>
 </body>
