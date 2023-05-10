@@ -43,3 +43,6 @@ const navLinks = document.querySelectorAll('a.nav-link').forEach(navLink => {
   })
 })
 
+document.addEventListener('wheel', (evt) => {
+  console.log(evt)
+})

@@ -164,27 +164,34 @@ h1 {
 /* temp */
 .nav-link {
   text-decoration: none;
-  color: var(--primary-text);
+  color: var(--secondary-text);
+  padding-right: 10px;
+  max-width: 0px !important;
+  overflow-x: none;
+}
+
+.nav-link::after {
+  content: '';
+  margin-left: 1em;
+  border: 1px solid rgb(217, 217, 217);
+}
+
+.active-link::after {
+  margin: calc(1em -1px);
+  border: 3px solid white;
+  border-radius: 3px;
 }
 
 #navigation {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
-  padding: 0;
-  margin-right: 3em;
+  padding-right: 1em;
 }
 
 #navigation > li {
   margin: 1em 0 1em 0;
-}
-
-.line {
-  height: 4em;
-  width: 1px;
-  background-color: var(--);
-
 }
 
 #contact {
