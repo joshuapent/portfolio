@@ -26,13 +26,14 @@ document.getElementById('onyx-button').onclick = function() {
   onyxGaming.classList.add('project-card-show');
 }
 
-const navLinks = document.querySelectorAll('a.nav-link');
 
-for(i = 0; i < navLinks.length; i++) {
-  navLinks[i].addEventListener('click', function(e) {
-    e.preventDefault();
+const navLinks = document.querySelectorAll('a.nav-link').forEach(navLink => {
+  navLink.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    this.setAttribute('aria-current', true)
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     })
   })
-}
+})
+
