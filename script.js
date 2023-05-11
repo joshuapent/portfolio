@@ -31,19 +31,10 @@ document.getElementById('onyx-button').onclick = function() {
 let navPlaceholder;
 const navLinks = document.querySelectorAll('a.nav-link').forEach(navLink => {
   navLink.addEventListener('click', function(evt) {
-    console.log('name', navLink.name)
     scrollLocation = parseInt(navLink.name)
-    console.log('this', scrollLocation)
-    if(navPlaceholder) {
-      navPlaceholder.removeAttribute('aria-current')
-      navPlaceholder.classList.remove('active-link')
-    }
     evt.preventDefault();
-    this.setAttribute('aria-current', true)
-    this.classList.add('active-link')
     scrollFunction()
     navPlaceholder = this;
-    console.log(this.getAttribute('href'))
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     })
@@ -62,7 +53,6 @@ function scrollFunction(evt) {
       scrollLocation--;
     }
     let thisLink = document.querySelector(`a[name='${scrollLocation}']`)
-    console.log(thisLink.getAttribute('href'))
     document.querySelector(thisLink.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     })
@@ -70,7 +60,6 @@ function scrollFunction(evt) {
   scrollBar.style.transform = `translateY(${50*scrollLocation}px)`;
 }
 
-// document.addEventListener("wheel", throttle(scrollFunction, 1000));
 let wait = false;
 document.addEventListener('wheel', function(evt) {
   evt.preventDefault();
@@ -80,5 +69,4 @@ document.addEventListener('wheel', function(evt) {
   setTimeout(() => {
     wait = false;
   }, 1000);
-  console.log('hi')
 }, { passive: false });
