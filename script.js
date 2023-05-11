@@ -6,6 +6,8 @@ const aboutMe = document.getElementById('about-me')
 const projects = document.getElementById('projects')
 const contact = document.getElementById('contact')
 
+let scrollLocation = null;
+
 window.onload = function() {
   pacman.classList.add('project-card-show');
 }
@@ -29,6 +31,8 @@ document.getElementById('onyx-button').onclick = function() {
 let navPlaceholder;
 const navLinks = document.querySelectorAll('a.nav-link').forEach(navLink => {
   navLink.addEventListener('click', function(evt) {
+    scrollLocation = parseInt(navLink.name)
+    console.log(scrollLocation)
     if(navPlaceholder) {
       navPlaceholder.removeAttribute('aria-current')
       navPlaceholder.classList.remove('active-link')
@@ -36,6 +40,7 @@ const navLinks = document.querySelectorAll('a.nav-link').forEach(navLink => {
     evt.preventDefault();
     this.setAttribute('aria-current', true)
     this.classList.add('active-link')
+    scrollbar()
     navPlaceholder = this;
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
@@ -53,24 +58,20 @@ function throttle(fn, wait) {
     }
   }
 }
-let num = null;
 // let num;
 function scrollbar(evt) {
   const scrollBar = document.querySelector('div.scroll-bar')
-  if(!num) { 
-    let num = 0;
+  if(!scrollLocation) { 
+    let scrollLocation = 0;
   }
-  let scrollLocation;
-  if (evt.wheelDeltaY < 0 && num < 3) {
-    num++;
-    console.log(num)
-    console.log('hi')
-    // console.log('down')
-    scrollBar.style.transform = `translateY(${50*num}px)`;
-  } else if (evt.wheelDeltaY > 0 && num > 0) {
-    num--;
-    scrollBar.style.transform = `translateY(${50*num}px)`;
-  } else return;
+  if (evt) {
+    if (evt.wheelDeltaY < 0 && scrollLocation < 3) {
+      scrollLocation++;
+    } else if (evt.wheelDeltaY > 0 && scrollLocation > 0) {
+      scrollLocation--;
+    }
+  }
+  scrollBar.style.transform = `translateY(${50*scrollLocation}px)`;
 }
 
 document.addEventListener("wheel", throttle(scrollbar, 1000));
