@@ -31,8 +31,9 @@ document.getElementById('onyx-button').onclick = function() {
 let navPlaceholder;
 const navLinks = document.querySelectorAll('a.nav-link').forEach(navLink => {
   navLink.addEventListener('click', function(evt) {
+    console.log('name', navLink.name)
     scrollLocation = parseInt(navLink.name)
-    console.log(scrollLocation)
+    console.log('this', scrollLocation)
     if(navPlaceholder) {
       navPlaceholder.removeAttribute('aria-current')
       navPlaceholder.classList.remove('active-link')
@@ -40,29 +41,19 @@ const navLinks = document.querySelectorAll('a.nav-link').forEach(navLink => {
     evt.preventDefault();
     this.setAttribute('aria-current', true)
     this.classList.add('active-link')
-    scrollbar()
+    scrollFunction()
     navPlaceholder = this;
+    console.log(this.getAttribute('href'))
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     })
   })
 })
 
-function throttle(fn, wait) {
-  var time = Date.now();
-  return function(evt) {
-    if (Math.abs(evt.deltaY) < 4) return
-    if ((time + wait - Date.now()) < 0) {
-      fn(evt);
-      time = Date.now();
-    }
-  }
-}
-// let num;
-function scrollbar(evt) {
+function scrollFunction(evt) {
   const scrollBar = document.querySelector('div.scroll-bar')
   if(!scrollLocation) { 
-    let scrollLocation = 0;
+    scrollLocation = 0;
   }
   if (evt) {
     if (evt.wheelDeltaY < 0 && scrollLocation < 3) {
@@ -70,8 +61,24 @@ function scrollbar(evt) {
     } else if (evt.wheelDeltaY > 0 && scrollLocation > 0) {
       scrollLocation--;
     }
+    let thisLink = document.querySelector(`a[name='${scrollLocation}']`)
+    console.log(thisLink.getAttribute('href'))
+    document.querySelector(thisLink.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    })
   }
   scrollBar.style.transform = `translateY(${50*scrollLocation}px)`;
 }
 
-document.addEventListener("wheel", throttle(scrollbar, 1000));
+// document.addEventListener("wheel", throttle(scrollFunction, 1000));
+let wait = false;
+document.addEventListener('wheel', function(evt) {
+  evt.preventDefault();
+  if (wait) return;
+  scrollFunction(evt);
+  wait = true;
+  setTimeout(() => {
+    wait = false;
+  }, 1000);
+  console.log('hi')
+}, { passive: false });
