@@ -55,11 +55,14 @@ function throttle(fn, wait) {
 }
 
 function scrollbar(evt) {
-  // console.log(evt)
+  const scrollBar = document.querySelector('div.scroll-bar')
+  let scrollLocation;
   if (evt.wheelDeltaY < 0) {
-    console.log('down')
+    num = 2;
+    // console.log('down')
+    scrollBar.style.transform = `translateY(${50*num}px)`;
   } else if (evt.wheelDeltaY > 0) {
-    console.log('up')
+    scrollBar.style.transform = `translateY(${-50*num}px)`;
   } else return;
 }
 
