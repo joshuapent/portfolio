@@ -179,7 +179,7 @@ h1 {
   align-items: center;
   width: 50px;
   height: 50px;
-  margin-right: 2em;
+  /* margin-right: 2em; */
   color: var(--secondary-text);
   border-right: 1px solid rgb(153, 153, 153);
   overflow-x: none;
@@ -199,20 +199,16 @@ h1 {
 .scroll-bar {
   content: '';
   border: none;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: all 1s ease-in-out; 
-}
-
-.scroll-bar::after {
-  content: '';
+  /* width: 50px;
+  height: 50px; */
+  position: relative;
+  top: 55px;
+  right: 20;
   border: 3px solid white;
-  border-radius: 5px;
-  height: 50px;
   width: 0px;
+  border-radius: 5px;
+  margin: 0;
+  transition: all 1s ease-in-out; 
 }
 
 #contact {

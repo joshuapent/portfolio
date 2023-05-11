@@ -53,17 +53,24 @@ function throttle(fn, wait) {
     }
   }
 }
-
+let num = null;
+// let num;
 function scrollbar(evt) {
   const scrollBar = document.querySelector('div.scroll-bar')
+  if(!num) { 
+    let num = 0;
+  }
   let scrollLocation;
-  if (evt.wheelDeltaY < 0) {
-    num = 2;
+  if (evt.wheelDeltaY < 0 && num < 3) {
+    num++;
+    console.log(num)
+    console.log('hi')
     // console.log('down')
     scrollBar.style.transform = `translateY(${50*num}px)`;
-  } else if (evt.wheelDeltaY > 0) {
-    scrollBar.style.transform = `translateY(${-50*num}px)`;
+  } else if (evt.wheelDeltaY > 0 && num > 0) {
+    num--;
+    scrollBar.style.transform = `translateY(${50*num}px)`;
   } else return;
 }
 
-document.addEventListener("wheel", throttle(scrollbar, 500));
+document.addEventListener("wheel", throttle(scrollbar, 1000));
