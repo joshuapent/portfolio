@@ -43,6 +43,24 @@ const navLinks = document.querySelectorAll('a.nav-link').forEach(navLink => {
   })
 })
 
-document.addEventListener('wheel', (evt) => {
-  console.log(evt)
-})
+function throttle(fn, wait) {
+  var time = Date.now();
+  return function(evt) {
+    if (Math.abs(evt.deltaY) < 4) return
+    if ((time + wait - Date.now()) < 0) {
+      fn(evt);
+      time = Date.now();
+    }
+  }
+}
+
+function scrollbar(evt) {
+  // console.log(evt)
+  if (evt.wheelDeltaY < 0) {
+    console.log('down')
+  } else if (evt.wheelDeltaY > 0) {
+    console.log('up')
+  } else return;
+}
+
+document.addEventListener("wheel", throttle(scrollbar, 500));

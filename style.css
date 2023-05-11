@@ -140,7 +140,6 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  
 }
 
 .page {
@@ -162,25 +161,6 @@ h1 {
   margin: 0;
 }
 /* temp */
-.nav-link {
-  text-decoration: none;
-  color: var(--secondary-text);
-  padding-right: 10px;
-  max-width: 0px !important;
-  overflow-x: none;
-}
-
-.nav-link::after {
-  content: '';
-  margin-left: 1em;
-  border: 1px solid rgb(217, 217, 217);
-}
-
-.active-link::after {
-  margin: calc(1em -1px);
-  border: 3px solid white;
-  border-radius: 3px;
-}
 
 #navigation {
   display: flex;
@@ -190,8 +170,43 @@ h1 {
   padding-right: 1em;
 }
 
-#navigation > li {
-  margin: 1em 0 1em 0;
+.nav-link,
+.active-link, 
+.scroll-bar {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 2em;
+  color: var(--secondary-text);
+  border-right: 1px solid rgb(153, 153, 153);
+  overflow-x: none;
+}
+
+.active-link::after {
+  content: '';
+  margin: calc(-3px);
+  border: 3px solid var(--secondary-text);
+  border-radius: 3px;
+  height: 50px;
+  width: 0px;
+  position: relative;
+  left: 16px;
+}
+
+.scroll-bar {
+  content: '';
+  width: 50px;
+  height: 50px;
+}
+
+.scroll-bar::after {
+  content: '';
+  border: 3px solid white;
+  height: 50px;
+  width: 0px;
 }
 
 #contact {
@@ -216,6 +231,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5%;
   color: var(--primary-text);
   font-family: var(--secondary-font);
