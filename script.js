@@ -25,7 +25,7 @@ document.getElementById('slack-button').onclick = function() {
 document.getElementById('onyx-button').onclick = function() {
   slackOverFlow.classList.remove('project-card-show');
   pacman.classList.remove('project-card-show');
-  onyxGaming.classList.add('project-card-show ');
+  onyxGaming.classList.add('project-card-show');
 }
 
 let navPlaceholder;

@@ -1,10 +1,10 @@
 :root {
-  --background-dark: #141416;
-  --button-color-dark: #323232;
-  --highlight-color-hover-dark: #454545;
-  --highlight-color-click-dark: #686868;
-  --primary-text: #F26430;
-  --secondary-text: #f0f8ff;
+  --background: #141416;
+  --button-color: #323232;
+  --highlight-color-hover: #454545;
+  --highlight-color-click: #686868;
+  --primary-text: #f0f8ff;
+  --secondary-text: #67a4cd;
   --primary-font: 'Fjalla One', sans-serif;
   --secondary-font: 'Merriweather', serif;
 }
@@ -20,7 +20,7 @@ h1 {
 }
 
 #form-button {
-  background-color: var(--button-color-dark);
+  background-color: var(--button-color);
   border: none; 
   padding: 0.5em;
   border-radius: 10px;
@@ -30,12 +30,12 @@ h1 {
 }
 
 #form-button:hover {
-  background-color: var(--highlight-color-hover-dark);
+  background-color: var(--highlight-color-hover);
   cursor: pointer;
 }
 
 #form-button:focus {
-  background-color: var(--highlight-color-click-dark);
+  background-color: var(--highlight-color-click);
 }
 
 li {
@@ -49,7 +49,7 @@ ul, h2 {
 }
 
 body {
-  background-color: var(--background-dark);
+  background-color: var(--background);
   margin: 0;
 }
 
@@ -60,8 +60,8 @@ body {
   margin: 20px;
   padding: 0.4em 0.8em;
   background-color: transparent;
-  border: 2px solid var(--secondary-text);
-  color: var(--secondary-text);
+  border: 2px solid var(--primary-text);
+  color: var(--primary-text);
   border-radius: 6px;
   z-index: 100;
   font-size: 1em;
@@ -70,13 +70,15 @@ body {
 }
 
 .resume-link:hover {  
-  background-color: var(--secondary-text);
-  color: var(--background-dark);
+  background-color: var(--primary-text);
+  color: var(--background);
   cursor: pointer;
 }
 
 .resume-link:active {
-  background-color: #e98b69;
+  opacity: 60%;
+  transition: all .1s
+    ease-in-out;
 }
 
 .split-content {
@@ -119,16 +121,21 @@ body {
   gap: 1.5rem;
 }
 
-.skills {
+.project-skills, 
+.footer-skills {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  color: var(--secondary-text);
-  opacity: 50%; 
+  color: var(--primary-text);
 }
 
-.skills > li {
+.project-skills, 
+.footer-skills > li {
   font-size: 0.7rem;
+}
+
+.footer-skills {
+  opacity: 70%;
 }
 
 .socials, 
@@ -164,11 +171,10 @@ h1 {
   align-items: flex-end;
   justify-content: center;
   flex-direction: column;
-  padding-right: 1em;
+  padding-right: 2em;
 }
 
 .nav-link,
-.active-link, 
 .scroll-bar {
   text-decoration: none;
   display: flex;
@@ -177,24 +183,28 @@ h1 {
   width: 50px;
   height: 50px;
   /* margin-right: 2em; */
-  color: var(--secondary-text);
-  border-right: 1px solid rgb(153, 153, 153);
+  color: rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);;
   overflow-x: none;
 }
 
 .scroll-bar {
   content: '';
+  opacity: 100%;
   border: none;
-  /* width: 50px;
-  height: 50px; */
   position: relative;
   top: 55px;
   left: 2px;
-  border: 3px solid white;
+  border: 3px solid var(--primary-text);
   width: 0px;
   border-radius: 5px;
   margin: 0;
   transition: all 1s ease-in-out; 
+}
+
+.nav-link:hover { 
+  color: var(--primary-text);
+  transition: all .3s ease-in-out;
 }
 
 #contact {
@@ -213,7 +223,7 @@ h1 {
 
 .contact-form > form {
   width: 50%;
-  border: 2px solid var(--button-color-dark);
+  border: 2px solid var(--button-color);
   border-radius: 10px;
   padding: 2em;
   display: flex;
@@ -221,18 +231,18 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 5%;
-  color: var(--primary-text);
+  color: var(--secondary-text);
   font-family: var(--secondary-font);
 }
 
 .contact-me {
   background-color: var(--background);
-  border: 1px solid var(--button-color-dark);
+  border: 1px solid var(--button-color);
   border-radius: 8px;
   padding: 0.5rem;
   font-size: 1rem;
   font-family: var(--secondary-font);
-  color: var(--primary-text)
+  color: var(--secondary-text)
 }
 
 input[type=text],
@@ -242,11 +252,11 @@ input[type=email] {
 
 .form-info {
   padding: 2em;
-  color: var(--secondary-text);
+  color: var(--primary-text);
 }
 
 hr {
-  background-color: #F26430;
+  background-color: var(--secondary-text);
   height: 2px;
   border: none;
 }
@@ -261,7 +271,7 @@ textarea {
 }
 
 .footer-desc {
-  color: var(--secondary-text);
+  color: var(--primary-text);
 }
 
 .project-grid {
@@ -281,13 +291,13 @@ textarea {
   grid-row: 1;
   width: 50vw;
   max-width: 800px;
-  color: var(--secondary-text);
+  color: var(--primary-text);
 }
 
 .left-bar {
   width: 2px;
   height: auto;
-  background-image: radial-gradient(var(--primary-text), var(--background-dark));
+  background-image: radial-gradient(var(--secondary-text), var(--background));
   margin: 0 1em;
 }
 
@@ -306,10 +316,10 @@ textarea {
 }
 
 .project-skill {
-  background-color: var(--secondary-text);
+  background-color: var(--primary-text);
   border-radius: 5px;
   padding: 4px;
-  color: var(--background-dark);
+  color: var(--background);
 }
 
 .project-card > h1 {
