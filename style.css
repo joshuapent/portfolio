@@ -367,6 +367,25 @@ textarea {
   text-overflow: ellipsis;
 }
 
+.about-me-body {
+
+}
+
+.about-me-main-text {
+
+}
+
+.my-skills {
+  
+}
+
+.profile-pic-container > img {
+  border-radius: 50%;
+  overflow: none;
+  max-width: 25vw;
+  max-height: 25vh;
+}
+
 .project-links {
   display: flex;
   margin-top: 1.5em;
@@ -427,22 +446,26 @@ textarea {
 }
 
 #intro-word-one {
-  animation-delay: 2s;
-  animation: fadeIn 2s;
+  animation-delay: 4s;
+  animation: startFadeIn 1s;
 }
 #intro-word-two {
-  animation-delay: 4s;
-  animation: fadeIn 2s;
+  animation-delay: 1s;
+  animation: startFadeIn 2.5s;
 }
 #intro-word-three {
-  animation-delay: 6s;
-  animation: fadeIn 2s;
+  animation-delay: 1.5s;
+  animation: startFadeIn 4s;
 }
-
-
 
 .element-delay {
   transition: all 1s ease-in-out;
+}
+
+@keyframes startFadeIn {
+  0% { opacity: 0; }
+  50% { opacity: 0 }
+  100% { opacity: 1; }
 }
 
 @keyframes fadeIn {

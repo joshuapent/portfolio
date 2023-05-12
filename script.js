@@ -7,7 +7,6 @@ const projects = document.getElementById('projects')
 const contact = document.getElementById('contact')
 const arrowDiv = document.querySelector('div.arrow-div')
 
-
 let scrollLocation = null;
 
 window.onload = function() {
@@ -67,6 +66,12 @@ function scrollFunction(evt) {
   scrollBar.style.transform = `translateY(${50*scrollLocation}px)`;
 }
 
+document.addEventListener('keydown', function(evt) {
+  if(evt.key == ' ') {
+    evt.preventDefault();
+  }
+});
+
 let wait = false;
 document.addEventListener('wheel', function(evt) {
   evt.preventDefault();
@@ -75,5 +80,5 @@ document.addEventListener('wheel', function(evt) {
   wait = true;
   setTimeout(() => {
     wait = false;
-  }, 1000);
+  }, 1500);
 }, { passive: false });
