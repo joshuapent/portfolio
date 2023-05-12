@@ -365,18 +365,34 @@ textarea {
 .description > p {
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 1.2em;
+  margin-bottom: 1em;
 }
 
-.about-me-body {
-
+#about-me {
+  flex-direction: column;
+  margin: 2em, 0;
 }
 
-.about-me-main-text {
-
+.about-me-body * {
+  margin-top: 1em;
+  color: var(--primary-text);
+  font-size: 1.3em;
+  max-width: 60vw;
 }
 
-.my-skills {
+.about-me-top-line {
+  display: flex;
+  justify-content: left;
+}
 
+.about-me-second-line {
+  display: flex;
+  justify-content: right;
+}
+
+.about-me-second-line > p {
+  max-width: 40vw;
 }
 
 .profile-pic-container > img {
@@ -412,6 +428,7 @@ textarea {
   background-color: var(--background);
   width: auto;
   color: var(--primary-text);
+  font-size: 1.2em;
   border: none; 
   border-radius: 0;
   padding: 0 0 0.5em 0;
