@@ -376,7 +376,7 @@ textarea {
 }
 
 .my-skills {
-  
+
 }
 
 .profile-pic-container > img {
@@ -438,6 +438,7 @@ textarea {
 
 .big-text {
   font-size: 2em;
+  text-shadow: 2.5px 2.5px 0 rgba(255, 255, 255, 0.5);
 }
 
 .light-blue {
