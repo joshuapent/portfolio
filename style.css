@@ -14,6 +14,11 @@
   background: transparent;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   color: var(--primary-text);
   font-family: var(--primary-font);
@@ -85,6 +90,25 @@ body {
   opacity: 60%;
   transition: all .1s
     ease-in-out;
+}
+
+.user-hint {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0 9vw 9vh 0;
+  color: var(--primary-text);
+  display: flex;
+  align-items: center;
+}
+
+.moving-arrow {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--primary-text);
+  margin-left: 1em;
+  animation: hoverEffect 1s infinite;
 }
 
 .split-content {
@@ -392,8 +416,24 @@ textarea {
 }
 
 .light-blue {
-  color: var(--secondary-text)
+  color: var(--secondary-text);
+  animation: darkAnimation 6s;
 }
+
+#intro-word-one {
+  animation-delay: 2s;
+  animation: fadeIn 2s;
+}
+#intro-word-two {
+  animation-delay: 4s;
+  animation: fadeIn 2s;
+}
+#intro-word-three {
+  animation-delay: 6s;
+  animation: fadeIn 2s;
+}
+
+
 
 .element-delay {
   transition: all 1s ease-in-out;
@@ -402,6 +442,12 @@ textarea {
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes darkAnimation {
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 950px) {
