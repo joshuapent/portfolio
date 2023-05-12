@@ -92,7 +92,8 @@ body {
     ease-in-out;
 }
 
-.user-hint {
+.user-hint, 
+.arrow-div {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -104,11 +105,16 @@ body {
 
 .moving-arrow {
   position: relative;
-  width: 10px;
-  height: 10px;
-  border: 1px solid var(--primary-text);
-  margin-left: 1em;
-  animation: hoverEffect 1s infinite;
+  font-size: 1.5em;
+  margin-left: 0.5em;
+  transform: rotate(90deg);
+  animation: hoverEffect 2s infinite;
+}
+
+@keyframes hoverEffect {
+  0% { margin-bottom: 0; }
+  50% { margin-bottom: 10px; }
+  100% { margin-bottom: 0; }
 }
 
 .split-content {
@@ -442,6 +448,11 @@ textarea {
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  100% { opacity: 1; }
+  0% { opacity: 0; }
 }
 
 @keyframes darkAnimation {

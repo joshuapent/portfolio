@@ -5,6 +5,8 @@ const home = document.getElementById('home')
 const aboutMe = document.getElementById('about-me')
 const projects = document.getElementById('projects')
 const contact = document.getElementById('contact')
+const arrowDiv = document.querySelector('div.arrow-div')
+
 
 let scrollLocation = null;
 
@@ -56,6 +58,11 @@ function scrollFunction(evt) {
     document.querySelector(thisLink.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     })
+  }
+  if(scrollLocation === 3) {
+    arrowDiv.style.visibility = 'hidden';
+  } else {
+    arrowDiv.style.visibility = 'visible';
   }
   scrollBar.style.transform = `translateY(${50*scrollLocation}px)`;
 }
