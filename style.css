@@ -408,6 +408,11 @@ textarea {
   color: var(--secondary-text);
 }
 
+.home-image {
+  max-width: 40vw;
+  max-height: 90vh;
+}
+
 .project-links > li > a {
   color: var(--primary-text);
   margin-right: 1em;
