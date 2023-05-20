@@ -408,9 +408,14 @@ textarea {
   color: var(--secondary-text);
 }
 
-.home-image {
+#home-image {
   max-width: 40vw;
   max-height: 90vh;
+  pointer-events: none;
+}
+
+#home {
+  padding-right: 6vw;
 }
 
 .project-links > li > a {
